@@ -17,7 +17,7 @@ std::vector<cv::Rect> FaceDetector::Detect(cv::Mat image)
 	std::vector<cv::Mat> outs;
 	this->netCaffe.forward(outs);
 	
-	return GetFaceRectsOfVectors(image, outs);
+	return GetFaceVectorOfRects(image, outs);
 }
 
 void FaceDetector::Initialize()
@@ -25,7 +25,7 @@ void FaceDetector::Initialize()
 	this->netCaffe = cv::dnn::readNetFromCaffe(this->ProtoDir, this->CaffeModelDir);
 }
 
-std::vector<cv::Rect> FaceDetector::GetFaceRectsOfVectors(cv::Mat image, std::vector<cv::Mat> outs)
+std::vector<cv::Rect> FaceDetector::GetFaceVectorOfRects(cv::Mat image, std::vector<cv::Mat> outs)
 {
 	std::vector<cv::Rect> rects;
 	

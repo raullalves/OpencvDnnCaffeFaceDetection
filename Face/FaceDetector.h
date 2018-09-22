@@ -18,5 +18,5 @@ private:
 
 	float ths = 0.2;
 
-	std::vector<cv::Rect> GetFaceRectsOfVectors(cv::Mat, std::vector<cv::Mat>);
+	std::vector<cv::Rect> GetFaceVectorOfRects(cv::Mat, std::vector<cv::Mat>);
 };
