@@ -13,7 +13,6 @@ private:
 
 	std::string ProtoDir = "deploy.prototxt";
 	std::string CaffeModelDir = "face_detector.caffemodel";
-	std::string TorchModelDir = "face_recognition.t7";
 
 	cv::dnn::dnn4_v20180917::Net netCaffe;
 
